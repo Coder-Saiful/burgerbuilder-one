@@ -13,7 +13,9 @@ if (process.env.NODE_ENV === "development") {
     app.use(morgan('dev'));
 }
 
-app.get('/', 'Server Start');
+app.get('/', () => {
+    console.log('Server Start');
+});
 app.use('/api/user', userRouter);
 app.use('/api/order', orderRouter);
 
