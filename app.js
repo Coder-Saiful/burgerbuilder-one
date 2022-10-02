@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 app.get('/', () => {
-    console.log('Server Start');
+    res.send('Server Start');
 });
 app.use('/api/user', userRouter);
 app.use('/api/order', orderRouter);
